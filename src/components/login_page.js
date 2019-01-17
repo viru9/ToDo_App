@@ -19,7 +19,7 @@ class LoginPage extends Component {
   onUserAdd(values){
 
     if(values.user_name === 'vm' && values.user_password==="123"){
-      localStorage.setItem('user_token','vm');
+      localStorage.setItem('user_token_viraj90','vm');
       this.props.history.push('/home');
     }
     else {

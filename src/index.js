@@ -38,7 +38,7 @@ function PublicRoute({
   ...rest
 }) {
   return (
-    <Route {...rest} render={(props) => !localStorage.getItem('user_token')
+    <Route {...rest} render={(props) => !localStorage.getItem('user_token_viraj90')
       ? <Component {...props}/>
       : <Redirect to={'/home'}/>}/>
   )
@@ -50,7 +50,7 @@ function PrivateRoute({
   ...rest
 }) {
   return (
-    <Route {...rest} render={(props) => localStorage.getItem('user_token')
+    <Route {...rest} render={(props) => localStorage.getItem('user_token_viraj90')
       ? <Component {...props}/>
       : <Redirect to={'/'}/>}/>
   )
