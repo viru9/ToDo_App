@@ -32,12 +32,15 @@ class Home extends Component {
 
   renderData() {
     return _.map(this.props.home.home.response, data => {
-      console.log('data: ',data);
       return (
 
 <tr key={data.id}>
 <td><input type="checkbox" name="vehicle" value="Bike"/>{data.value}</td>
-<td>{data.priority}</td>
+<td>
+{data.priority === 'Low' && <span className="badge-priority badge-low">{data.priority}</span>}
+{data.priority === 'Med' && <span className="badge-priority badge-med">{data.priority}</span>}
+{data.priority === 'High' && <span className="badge-priority badge-high">{data.priority}</span>}
+</td>
 </tr>
 
       )
@@ -51,6 +54,8 @@ class Home extends Component {
       priority: values.priority,
       value: values.add_name
     }
+
+    this.props.home.home.response.push(new_val);
 
     this.setState({modal:false});
     this.props.reset();
