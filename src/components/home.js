@@ -3,7 +3,7 @@ import MainNav from './main_nav';
 import {connect} from 'react-redux';
 import {fetchHomeValues} from './../actions/home';
 import _ from 'lodash';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Form, Label, Input } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, FormGroup, Form, Label} from 'reactstrap';
 import {validate} from './form_validation_addlist';
 import { Field, reduxForm } from 'redux-form';
 import TextFieldInput from './common/render_input';
@@ -99,8 +99,8 @@ class Home extends Component {
                   </FormGroup>
 
                   <FormGroup>
-                        <Button type={"submit"} disabled={pristine || submitting}>Add</Button>
-                        <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+                        <Button className="btn-custom" type={"submit"} disabled={pristine || submitting}>Add</Button>
+                        <Button className="btn-custom" color="secondary" onClick={this.toggle}>Cancel</Button>
                   </FormGroup>
 
           </Form>

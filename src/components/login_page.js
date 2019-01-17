@@ -7,13 +7,6 @@ import {
   Button,
   Form,
   FormGroup,
-  Input,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  FormFeedback,
-  Label,
   Container,
   Row,
   Col
@@ -22,10 +15,6 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 
 class LoginPage extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   onUserAdd(values){
 
@@ -46,7 +35,7 @@ const { handleSubmit, pristine, reset, submitting } = this.props;
 
     return (
 
-      <Container>
+      <Container className="login-container">
 
       <Row>
           <Col sm="12" md={{ size: 6, offset: 3 }}>
@@ -63,8 +52,8 @@ const { handleSubmit, pristine, reset, submitting } = this.props;
                       </FormGroup>
 
                       <FormGroup>
-                            <Button type={"submit"} disabled={pristine || submitting}>Sign up</Button>
-                          <Button type={"button"} disabled={pristine || submitting} onClick={reset}>Clear</Button>
+                          <Button className="btn-custom" type={"submit"} disabled={pristine || submitting}>Sign up</Button>
+                          <Button className="btn-custom" type={"button"} disabled={pristine || submitting} onClick={reset}>Clear</Button>
                       </FormGroup>
 
             </Form>

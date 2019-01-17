@@ -1,12 +1,9 @@
-import {Input, FormFeedback, InputGroup, InputGroupAddon, Button} from 'reactstrap';
+import {Input, FormFeedback} from 'reactstrap';
 import React from 'react';
 
 const TextFieldInput = (props) => {
 
   const {
-    label,
-    input,
-    type,
     meta: {
       touched,
       error
