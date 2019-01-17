@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-import {validate} from './form_validation';
+import {validate} from './form_validation_login';
 import TextFieldInput from './common/render_input';
 import {
   Button,

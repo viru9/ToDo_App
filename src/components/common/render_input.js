@@ -16,11 +16,6 @@ const TextFieldInput = (props) => {
   return (
     <div>
 
-    {/*
-      <input {...input} placeholder={label} type={type} />
-      {touched && error && <span>{error}</span>}
-    */}
-
       <Input
       valid={touched && !error && true}
       invalid={touched && error && true}
