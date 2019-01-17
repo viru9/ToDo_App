@@ -35,7 +35,14 @@ class Home extends Component {
       return (
 
 <tr key={data.id}>
-<td><input type="checkbox" name="vehicle" value="Bike"/>{data.value}</td>
+<td>
+
+<label className="checkbox-task"><span>{data.value}</span>
+  <input type="checkbox"/>
+  <span className="checkmark"></span>
+</label>
+
+</td>
 <td>
 {data.priority === 'Low' && <span className="badge-priority badge-low">{data.priority}</span>}
 {data.priority === 'Med' && <span className="badge-priority badge-med">{data.priority}</span>}
