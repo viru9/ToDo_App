@@ -52,11 +52,8 @@ class Home extends Component {
       value: values.add_name
     }
 
-  console.log('onTaskAdd: ',values);
-  console.log('Props: ',this.props.home.home.response.push(new_val));
-
-  this.setState({modal:false});
-  this.props.reset();
+    this.setState({modal:false});
+    this.props.reset();
 
   }
 
@@ -100,11 +97,11 @@ class Home extends Component {
 
         </Modal>
 
-        <table>
+        <table className="task-table">
         <thead>
           <tr>
-            <th><button onClick={this.toggle}>Add</button></th>
-            <th>Priority</th>
+            <th><button className="btn-add-task" onClick={this.toggle}>Add Task</button></th>
+            <th className="text-fade">Priority</th>
           </tr>
         </thead>
 
@@ -122,9 +119,6 @@ class Home extends Component {
 function mapStateToProps(state) {
   return {home: state};
 }
-
-// export default connect(mapStateToProps, {fetchHomeValues})(Home);
-
 
 let taskAddingForm = reduxForm({validate, form: 'taskAddingForm'})(Home);
 export default connect(mapStateToProps, {fetchHomeValues})(taskAddingForm);
